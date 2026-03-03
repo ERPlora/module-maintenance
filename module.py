@@ -30,3 +30,16 @@ PERMISSIONS = [
 'maintenance.delete_maintenanceorder',
 'maintenance.manage_settings',
 ]
+
+ROLE_PERMISSIONS = {
+    "admin": ["*"],
+    "manager": [
+        "add_maintenanceorder",
+        "change_maintenanceorder",
+        "view_maintenanceorder",
+    ],
+    "employee": [
+        "add_maintenanceorder",
+        "view_maintenanceorder",
+    ],
+}
